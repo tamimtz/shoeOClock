@@ -1,0 +1,68 @@
+h1{
+    text-align: center;
+}
+
+a.path{
+    text-decoration: none;
+    color: inherit;
+    
+}
+
+img.svg{
+    height: 20px;
+    width: 30px;
+}
+
+div.card{
+    margin-bottom: 25px;
+    margin-right: 5px;
+    background-color: black;
+}
+
+h3.card-title{
+    text-align: center;
+    background-color: black;
+    color: dimgrey;
+    border-radius: 2px;
+}
+div.image-container{
+    position: relative;
+    overflow: hidden;
+    width: 100%; 
+    height: 450px;
+    border-radius: 2px;
+    
+}
+img.thumbnail{
+    width: 100%;
+    height: 100%;
+    border-radius: 2px;
+    transition: filter 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+img.thumbnail:hover {
+    filter:blur(5px);
+}
+
+
+li.categories {
+    list-style: none;
+    padding-left: 10px;
+    list-style-position: outside;
+    background-color: transparent; /* Set background to transparent */
+    border-radius: 4px;
+    border-bottom: 2px;
+    color: gray;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a glossy box shadow */
+}
+a.categories{
+    list-style: none;
+    padding-left: 10px;
+    list-style-position: outside;
+    background-color: transparent; /* Set background to transparent */
+    border-radius: 4px;
+    border-bottom: 2px;
+    color: gray;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a glossy box shadow */
+}
