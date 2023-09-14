@@ -34,6 +34,7 @@ Route::resource('manage', ManageController::class);
 Route::get('allProducts',[ProductController::class, 'allProducts'])->name('products.allProducts');
 Route::get('men',[ProductController::class, 'menHome'])->name('products.menHome');
 
+
 Route::get('/home', function() {
     return view('base.home');
 });

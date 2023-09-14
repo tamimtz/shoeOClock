@@ -12,6 +12,10 @@ img.svg{
     height: 20px;
     width: 30px;
 }
+h3.card-title{
+    text-align: center;
+    color: cadetblue;
+}
 
 div.card{
     margin-bottom: 25px;
@@ -19,11 +23,17 @@ div.card{
     background-color: black;
 }
 
-h3.card-title{
+h5.card-title{
     text-align: center;
-    background-color: black;
+    /* background-color: black; */
     color: dimgrey;
+    padding-top: 5px;
     border-radius: 2px;
+}
+p.price-tag{
+    text-align: center;
+    color: dimgray;
+    font-size: large;
 }
 div.image-container{
     position: relative;
@@ -65,4 +75,57 @@ a.categories{
     border-bottom: 2px;
     color: gray;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add a glossy box shadow */
+}
+
+
+div.shoe-container{
+    height: auto;
+    width: auto;
+    overflow: hidden;
+    position: relative;
+    border-radius: 5px;
+}
+
+div.shoe-container img{
+
+    width: 100%;
+    height: 100%;
+    transition: transform 0.3s;
+}   
+
+div.shoe-container:hover img{
+    transform: scale(1.2);
+}
+
+.card-category{
+    /* background-color: black; */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+div.container-mainImage{
+    width: 600px;
+    height: 700px;
+    overflow: hidden;
+    position: relative;
+
+}
+div.container-mainImage img{
+    max-width: 100%;
+    height: auto;
+    transform-origin: center;
+    transition: transform 0.1s;
+}
+div.container-mainImage:hover img{
+    transform: scale(2);
+}
+
+div.extraImage{
+    height: 140px;
+    width: 140px;
+}
+
+div.extraImage img{
+    max-width: 100%;
+    height: auto;
 }

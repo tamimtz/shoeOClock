@@ -61,7 +61,16 @@ class ProductController extends Controller
      */
     public function show(string $id)
     {
-        //
+        $product = Product::find($id);
+
+        $imageArray = explode(", ",$product->allImages);
+
+       
+       // return $imageArray;
+
+        return view('base.viewProduct', compact(['product','imageArray']));
+
+        
     }
 
     /**

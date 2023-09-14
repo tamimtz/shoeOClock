@@ -23,8 +23,8 @@ return new class extends Migration
             $table->float('sizeUk');
             $table->integer('sizeEu');
             $table->string('descriptionTitle');
-            $table->string('description');
-            $table->string('specification');
+            $table->text('description');
+            $table->text('specification');
             $table->string('thumbnail');
             $table->string('allImages');
             
