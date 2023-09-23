@@ -129,3 +129,12 @@ div.extraImage img{
     max-width: 100%;
     height: auto;
 }
+
+.cartImage{
+    height: 100px;
+    width: 100px;
+}
+.cartImage img{
+    max-width: 100%;
+    height: auto;
+}

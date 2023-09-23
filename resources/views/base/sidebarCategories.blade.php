@@ -1,3 +1,4 @@
+
 <div class="container">
     <div class="row">
         <div class="col">
@@ -51,8 +52,9 @@
 
                         <ul class="collapse ms-3 mt-2" id="footwear" >
                             <li class="categories" >
+                                <a class="nav-link" href="{{ route('products.menTrainers') }}"> Trainers</a>
                                 
-                                Trainers
+                               
                             </li>
                             <li class="categories mt-2" >
                                 

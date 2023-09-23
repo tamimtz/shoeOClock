@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\ManageController;
 use App\Http\Controllers\ProductController;
 
@@ -27,12 +28,37 @@ route::get('/', function(){
 
 Auth::routes();
 
+
+        ####      PRODUCTS      ####
+
 Route::resource('products', ProductController::class );
+
+
+
+Route::get('allProducts',[ProductController::class, 'allProducts'])->name('products.allProducts');
+
+Route::get('men',[ProductController::class, 'menHome'])->name('products.menHome');
+
+Route::get('allProducts/Men/FootWear/Trainers', [ProductController::class,'menTrainers'])->name('products.menTrainers');
+
+
+     ####      Manage      ####
 
 Route::resource('manage', ManageController::class);
 
-Route::get('allProducts',[ProductController::class, 'allProducts'])->name('products.allProducts');
-Route::get('men',[ProductController::class, 'menHome'])->name('products.menHome');
+
+
+
+    ####      Cart     ####
+
+Route::resource('cart', CartController::class);
+
+Route::post('/products/addProductToCart', [CartController::class, 'addProductToCart'])->name('cart.addProductToCart');
+
+Route::get('/checkout', [CartController::class, 'checkout'])->name('cart.checkout');
+
+
+
 
 
 Route::get('/home', function() {

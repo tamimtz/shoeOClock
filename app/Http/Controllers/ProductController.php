@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Gloudemans\Shoppingcart\Facades\Cart;
 
 class ProductController extends Controller
 {
@@ -42,6 +43,17 @@ class ProductController extends Controller
     } 
 
 
+     //#################################################### CAtegory Wise Browsing #########################################################
+
+     public function menTrainers() {
+
+        $menTrainers = Product::where('subCategory', 'Running Shoes')->get();
+
+
+
+        return view('men.menTrainers', compact(['menTrainers']));
+    }
+
 
     public function create()
     {
@@ -63,12 +75,14 @@ class ProductController extends Controller
     {
         $product = Product::find($id);
 
+        $cart = Cart::content();
+
         $imageArray = explode(", ",$product->allImages);
 
        
        // return $imageArray;
 
-        return view('base.viewProduct', compact(['product','imageArray']));
+        return view('base.viewProduct', compact(['product','imageArray','cart']));
 
         
     }
