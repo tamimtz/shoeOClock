@@ -18,7 +18,7 @@
 {{-- cactegories level1 --}}
 <div class="container categories">
     <div class="row">
-        <div class="container-category col-3">
+        <div class="container-category col-md-3">
             <div class=" mt-5 ">
                 <a class="categories nav-link"  data-bs-toggle="collapse" href="#categories" role="button" aria-expanded="false" aria-controls="categories">
                     <img class="svg" src="{{ url('storage/images/svg/category.svg') }}" alt="">

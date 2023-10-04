@@ -41,10 +41,18 @@ Route::get('men',[ProductController::class, 'menHome'])->name('products.menHome'
 
 Route::get('allProducts/Men/FootWear/Trainers', [ProductController::class,'menTrainers'])->name('products.menTrainers');
 
+Route::get('allProducts/Men/Brands', [ProductController::class, 'menBrands'])->name('products.menBrands');
+
+Route::get('allProducts/Men/Brands/Nike/Categories', [ProductController::class, 'menBrandsCategoriesNike'])->name('products.menBrandsCategoriesNike');
+
 
      ####      Manage      ####
 
 Route::resource('manage', ManageController::class);
+
+Route::get('manageProducts/NewProduct', [ManageController::class, 'newProduct'])->name('manage.newProduct');
+
+Route::get('/manageProducts/NewProduct/NewShoe',[ManageController::class, 'newShoes'])->name('manage.newShoes');
 
 
 

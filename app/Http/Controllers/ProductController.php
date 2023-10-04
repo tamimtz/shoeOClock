@@ -32,6 +32,15 @@ class ProductController extends Controller
      * Show the form for creating a new resource.
      */
 
+    public function menBrands() {
+
+        return view('base.menBrands');
+    }
+
+    public function menBrandsCategoriesNike() {
+
+        return view('men.menBrandsCategoriesNike');
+    }
 
 
     public function menHome(){
@@ -52,6 +61,13 @@ class ProductController extends Controller
 
 
         return view('men.menTrainers', compact(['menTrainers']));
+    }
+
+
+    public function nikeMenSports(){
+
+        
+
     }
 
 

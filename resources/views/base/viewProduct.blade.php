@@ -15,7 +15,7 @@
 
 <div class="container">
     <div class="row">
-        <div class="col">
+        <div class="col-md">
             <a class="path" href="{{ route('home') }}">home</a>/
             <a class="path" href="{{ route('products.allProducts') }}">allProducts</a>/
             
@@ -38,7 +38,7 @@
 
 <div class="container">
     <div class="row mt-5">
-        <div class="container col-4">
+        <div class="container col-md-4">
             <div class="container-mainImage ">
                 <img id="main" class="main" src="{{ asset('/storage/images/'.$product->thumbnail) }}"   alt="">
             </div>

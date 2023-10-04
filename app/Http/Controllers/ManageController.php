@@ -22,12 +22,26 @@ class ManageController extends Controller
         //
     }
 
+
+    
+    public function newProduct() {
+
+        return view('admin.newProduct');
+    }
+
+
+
     /**
      * Show the form for creating a new resource.
      */
     public function create()
     {
         return view('admin.addProducts');
+    }
+
+    public function newShoes(){
+
+        return view('admin.addShoes');
     }
 
     /**

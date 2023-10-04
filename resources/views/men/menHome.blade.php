@@ -2,8 +2,12 @@
 @section('content')
 
 @include('base.sidebarCategories')
+@include('base.menBrands')
 
-<div class="col-9">  
+{{-- ################### obsolete but can use later ############# --}}
+
+
+{{-- <div class="col-9">  
     <div class="container mt-5">
         <div class="row">
             @foreach ($products as $product)
@@ -29,5 +33,5 @@
             @endforeach
         </div>
     </div>
-</div>  
+</div>   --}}
 @endsection

@@ -17,12 +17,124 @@
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ms-auto">
 
-                <li>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Find Product" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
+
+                <li  >
+                    <a class="nav-link" href="{{ route('products.menHome') }}">
+                        Brands
+                    </a>
+                    
                 </li>
+
+                <li  >
+                    <a class="nav-link" href="{{ route('products.menHome') }}">
+                        Watches
+                    </a>
+                    
+                </li>
+
+                <ul class="menu">
+                    <li class="menu-item">
+                        <a class="nav-link" href="{{ route('products.menBrands') }}">Men</a>
+
+                        
+                        <ul class="submenu">
+
+                            <div class="row">
+                                <div class="col-4">
+                                    <!-- Items for the first column -->
+                                    <li class="brand-li"><a href="">NIKE</a></li>
+                                    <li><a href="">Trainers</a></li>
+                                    <li><a href="#">Running Shoes</a></li>
+                                    <li><a href="">Sports Shoes</a></li>
+                                    <li><a href="#">Shoes</a></li>
+                                    <li><a href="">Slides & Sandals</a></li>
+                                </div>
+                                <div class="col-4">
+                                    <!-- Items for the second column -->
+                                    <li class="brand-li"><a href="">ADIDAS</a></li>
+                                    <li><a href="">Trainers</a></li>
+                                    <li><a href="#">Running Shoes</a></li>
+                                    <li><a href="">Sports Shoes</a></li>
+                                    <li><a href="#">Shoes</a></li>
+                                    <li><a href="">Slides & Sandals</a></li>
+                                </div>
+
+                                <div class="col-4">
+                                    <!-- Items for the second column -->
+                                    <li class="brand-li"><a href="">PUMA</a></li>
+                                    <li><a href="">Trainers</a></li>
+                                    <li><a href="#">Running Shoes</a></li>
+                                    <li><a href="">Sports Shoes</a></li>
+                                    <li><a href="#">Shoes</a></li>
+                                    <li><a href="">Slides & Sandals</a></li>
+                                </div>
+
+                            </div>
+                            
+                            <!-- Add more submenu items as needed -->
+                        </ul>
+                        
+                        
+                        
+                    </li>
+                    <!-- Add more menu items as needed -->
+                </ul>
+                
+
+                <ul class="menu">
+                    <li class="menu-item">
+                        <a class="nav-link" href="{{ route('products.menHome') }}"> Women</a>
+
+                        
+                        <ul class="submenu">
+
+                            <div class="row">
+                                <div class="col-4">
+                                    <!-- Items for the first column -->
+                                    <li class="brand-li"><a href="">NIKE</a></li>
+                                    <li><a href="">Trainers</a></li>
+                                    <li><a href="#">Running Shoes</a></li>
+                                    <li><a href="">Sports Shoes</a></li>
+                                    <li><a href="#">Shoes</a></li>
+                                    <li><a href="">Slides & Sandals</a></li>
+                                </div>
+                                <div class="col-4">
+                                    <!-- Items for the second column -->
+                                    <li class="brand-li"><a href="">ADIDAS</a></li>
+                                    <li><a href="">Trainers</a></li>
+                                    <li><a href="#">Running Shoes</a></li>
+                                    <li><a href="">Sports Shoes</a></li>
+                                    <li><a href="#">Shoes</a></li>
+                                    <li><a href="">Slides & Sandals</a></li>
+                                </div>
+
+                                <div class="col-4">
+                                    <!-- Items for the second column -->
+                                    <li class="brand-li"><a href="">PUMA</a></li>
+                                    <li><a href="">Trainers</a></li>
+                                    <li><a href="#">Running Shoes</a></li>
+                                    <li><a href="">Sports Shoes</a></li>
+                                    <li><a href="#">Shoes</a></li>
+                                    <li><a href="">Slides & Sandals</a></li>
+                                </div>
+
+                            </div>
+                            
+                            <!-- Add more submenu items as needed -->
+                        </ul>
+                        
+                        
+                        
+                    </li>
+                    <!-- Add more menu items as needed -->
+                </ul>
+                
+               
+
+                    
+                
+
+
 
                 <li  >
                     <a class="nav-link" href="{{ route('products.allProducts') }}">
@@ -30,6 +142,18 @@
                     </a>
                     
                 </li>
+
+                <li>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Find Product" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </li>
+                <li>
+                    <span></span>
+                </li>
+
+                
 
                 <li  >
                     <a class="nav-link" href="{{ route('cart.index') }}">
@@ -55,7 +179,7 @@
                             <a class="dropdown-item" href="">
                                 Products
                             </a>
-                            <a class="dropdown-item" href="{{ route('manage.create') }}">
+                            <a class="dropdown-item" href="{{ route('manage.newProduct') }}">
                                 Add Product
                             </a>
                             <a class="dropdown-item" href="">
