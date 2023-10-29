@@ -284,3 +284,48 @@ div.extraImage img{
 .new-shoe-form input{
     margin-top: 10px;
 }
+
+.admin-panel-header{
+
+    background-color: #212A3E;
+    margin: 10px;
+    border-radius: 10px;
+    padding-top: 20px;
+    
+    
+    color: #008170;
+
+}
+
+.new-brand-form{
+
+    background: #35A29F;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 1.1em;
+    
+
+}
+.brandlist-image{
+    width: 50px;
+    height: 45px;
+    cursor:grab;
+}
+
+
+.brand-image {
+    position: relative;
+}
+
+.brand-image img {
+    display: block;
+}
+
+.brand-image p {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.8em;
+    
+}

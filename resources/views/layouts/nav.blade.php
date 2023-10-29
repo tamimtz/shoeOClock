@@ -83,7 +83,7 @@
 
                 <ul class="menu">
                     <li class="menu-item">
-                        <a class="nav-link" href="{{ route('products.menHome') }}"> Women</a>
+                        <a class="nav-link" href="{{ route('products.womenBrands') }}"> Women</a>
 
                         
                         <ul class="submenu">
@@ -176,9 +176,14 @@
 
                         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
 
-                            <a class="dropdown-item" href="">
+                            <a class="dropdown-item" href="{{ route('brand.index') }}">
+                                Brands
+                            </a>
+
+                            <a class="dropdown-item" href="{{ route('manage.products') }}">
                                 Products
                             </a>
+
                             <a class="dropdown-item" href="{{ route('manage.newProduct') }}">
                                 Add Product
                             </a>

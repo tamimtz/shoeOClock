@@ -4,16 +4,20 @@
 
 
 
-    <div class="container">
+    <div class="admin-panel-header container">
         <h1>Add New Product</h1>
         <br><br>
+        
+    </div>
+    <div class="container">
         <p class="add-product-paragraph">Select to add product</p>
     </div>
+    
 
     <div class="container">
         <div class="row">
             <div class="new-product-shoes col-md-2 ">
-                <a class="nav-link" href="{{ route('manage.newShoes') }}">
+                <a class="nav-link" href="{{ route('manage.create') }}">
                     <div class="row">
 
                     
@@ -30,7 +34,7 @@
             </div>
 
             <div class="new-product-watch col-md-2">
-                <a class="nav-link" href="">
+                <a class="nav-link" href="{{ route('manage.newWatches') }}">
                     <div class="row">
 
                     
@@ -46,7 +50,7 @@
             </div>
 
             <div class="new-product-garments col-md-2">
-                <a class="nav-link" href="">
+                <a class="nav-link" href="{{ route('manage.newGarments') }}">
                     <div class="row">
 
                     
