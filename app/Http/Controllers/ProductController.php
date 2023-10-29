@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 
+use App\Models\Brand;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Gloudemans\Shoppingcart\Facades\Cart;
@@ -34,7 +35,28 @@ class ProductController extends Controller
 
     public function menBrands() {
 
-        return view('base.menBrands');
+        
+
+        $brandMen = Brand::all();
+        
+        
+        $uniqueBrandIds = $brandMen->flatMap(function ($brand) {
+            return $brand->products
+                ->where('gender', 'men')
+                ->pluck('brand_id');
+        })->unique();
+        
+        
+
+        $brands = Brand::whereIn('id', $uniqueBrandIds->toArray())->get();
+
+
+        
+        return view('base.menBrands', compact(['brands']));
+        
+
+
+        
     }
 
     public function menBrandsCategoriesNike() {
@@ -56,7 +78,7 @@ class ProductController extends Controller
 
      public function menTrainers() {
 
-        $menTrainers = Product::where('subCategory', 'Running Shoes')->get();
+        $menTrainers = Product::where('subCategory', 'Trainers')->get();
 
 
 
@@ -81,7 +103,12 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $check = $request->input('size');
+        $euCheck = $request->input('euSize');
+
+        return $euCheck . $check;
+        
+        
     }
 
     /**
@@ -126,7 +153,7 @@ class ProductController extends Controller
     {
         //
     }
-}
+
 
 
  //     $product =Product::find(1);
@@ -145,3 +172,33 @@ class ProductController extends Controller
     //    foreach ($product->tags as $men)
 
     //    echo $men->id;
+
+
+
+    ////////////////////////////WOMEN SECTION //////////////////////////////
+
+    public function womenBrands() {
+
+        $brandWomen = Brand::all();
+        
+        
+        $uniqueBrandIds = $brandWomen->flatMap(function ($brand) {
+            return $brand->products
+                ->where('gender', 'women')
+                ->pluck('brand_id');
+        })->unique();
+        
+        
+
+        $brands = Brand::whereIn('id', $uniqueBrandIds->toArray())->get();
+
+
+        
+        return view('base.womenBrands', compact(['brands']));
+        
+    
+
+        
+    }
+
+}

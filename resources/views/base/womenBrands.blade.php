@@ -12,7 +12,7 @@
             @foreach ($brands as $brand )
                 <div class="col-md-4">
                     
-                    <a class="nav-link" href="{{route('brand.dynamicBrandCategoriesMen', $brand->id)}}">
+                    <a class="nav-link" href="{{route ('products.menBrandsCategoriesNike')}}">
                         
                         <div class="brand-image">
                             <img src="{{ url('/storage/images/'.$brand->brandImage) }}" class="thumbnail" alt="...">

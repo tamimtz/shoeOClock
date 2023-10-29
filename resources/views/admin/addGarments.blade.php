@@ -19,7 +19,7 @@
 </div>
 <div class="container">
 
-    <form action="{{ route('manage.store') }}" method="post" enctype="multipart/form-data" >
+    <form action="{{ route('manage.storeGarments') }}" method="post" enctype="multipart/form-data" >
 
         @csrf
         <div class="form-control">
@@ -107,10 +107,8 @@
             <div class="col-md-3" >
                 <select class="form-control" name="category" id="category">
                     
-                    <option value="clothings">Clothings</option>
-                    <option value="footwear">Footwear</option>
-                    <option value="option3">Fragrances</option>
-                    <option value="option4">Watches</option>
+                    
+                    <option value="watches">Garments</option>
                 </select>
             </div>
            
@@ -121,10 +119,11 @@
 
             <div class="col-md-3" >
                 <select class="form-control" name="subCategory" id="subCategory">
-                    <option value="selected">Select Subcategory</option>
-                    <option value="option1">Option 1</option>
-                    <option value="option2">Option 2</option>
-                    <option value="option3">Option 3</option>
+                    
+                    <option value="formal">Formal</option>
+                    <option value="sports">Sports</option>
+                    <option value="casual">Casual</option>
+                    <option value="undergarments">Undergarments</option>
                 </select>
             </div>
 
@@ -147,48 +146,26 @@
     
     
                     <div class="col-md" name="ukSize" id="ukSizeMen">
-                        <label for="">UK Size</label>
-                        <label for="">3</label>
-                        <input name="size[]" value="3" type="checkbox">
-                        <label for="">3.5</label>
-                        <input name="size[]" value="3.5" type="checkbox">
-                        <label for="">4</label>
-                        <input name="size[]" value="4" type="checkbox">
-                        <label for="">4.5</label>
-                        <input name="size[]" value="4.5"type="checkbox">
-                        <label for="">5</label>
-                        <input name="size[]" value="5"type="checkbox">
-                        <label for="">5.5</label>
-                        <input name="size[]" value="5.5"type="checkbox">
-                        <label for="">6</label>
-                        <input name="size[]" value="6"type="checkbox">
-                        <label for="">6.5</label>
-                        <input name="size[]" value="6.5"type="checkbox">
-                        <label for="">7</label>
-                        <input name="size[]" value="7"type="checkbox">
-                        <label for="">7.5</label>
-                        <input name="size[]" value="7.5"type="checkbox">
-                        <label for="">8</label>
-                        <input name="size[]" value="8"type="checkbox">
-                        <label for="">8.5</label>
-                        <input name="size[]" value="8.5"type="checkbox">
-                        <label for="">10</label>
-                        <input name="size[]" value="10"type="checkbox">
-                        <label for="">11</label>
-                        <input name="size[]" value="11"type="checkbox">
-                        <label for="">12</label>
-                        <input name="size[]" value="12"type="checkbox">
-                        <label for="">12.5</label>
-                        <input name="size[]" value="12.5"type="checkbox">
-                        <label for="">14</label>
-                        <input name="size[]" value="14"type="checkbox">
+                        
+                        <label class="ms-2" for="">S</label>
+                        <input class="ms-2" name="size[]" value="s" type="checkbox">
+                        <label class="ms-2" for="">M</label>
+                        <input class="ms-2" name="size[]" value="m" type="checkbox">
+                        <label class="ms-2"  for="">L</label>
+                        <input class="ms-2" name="size[]" value="l" type="checkbox">
+                        <label class="ms-2" for="">XL</label>
+                        <input class="ms-2" name="size[]" value="xl"type="checkbox">
+                        <label class="ms-2" for="">XXL</label>
+                        <input class="ms-2" name="size[]" value="xxl"type="checkbox">
+                        
+                        
     
                     </div>
     
                     <div class="col-md" name="ukSize" id="ukSizeWomen"  style="display: none;">
                         <label for="">UK Size Women</label>
-                        <label for="">2.5</label>
-                        <input name="size[]" value="2.5" type="checkbox">
+                        <label class="ml-2" for="">2.5</label>
+                        <input class="ml-2"  name="size[]" value="2.5" type="checkbox">
                         <label for="">3</label>
                         <input name="size[]" value="3" type="checkbox">
                         <label for="">3.5</label>
@@ -224,50 +201,7 @@
                     </div>
     
     
-                    <div class="col-md" name="euSize">
-                        <label for="">EU Size</label>
-    
-                        <label for="">35</label>
-                        <input name="euSize[]" value="35" type="checkbox">
-                        <label for="">35.5</label>
-                        <input name="euSize[]" value="35.5" type="checkbox">
-                        <label for="">36</label>
-                        <input name="euSize[]" value="36" type="checkbox">
-                        <label for="">37</label>
-                        <input name="euSize[]" value="37" type="checkbox">
-                        <label for="">37.5</label>
-                        <input name="euSize[]" value="37.5" type="checkbox">
-                        <label for="">38</label>
-                        <input name="euSize[]" value="38" type="checkbox">
-                        <label for="">38.5</label>
-                        <input name="euSize[]" value="38.5" type="checkbox">
-                        <label for="">39</label>
-                        <input name="euSize[]" value="39" type="checkbox">
-                        <label for="">40</label>
-                        <input name="euSize[]" value="40" type="checkbox">
-                        <label for="">41</label>
-                        <input name="euSize[]" value="41"type="checkbox">
-                        <label for="">41.5</label>
-                        <input name="euSize[]" value="41.5"type="checkbox">
-                        <label for="">42</label>
-                        <input name="euSize[]" value="42"type="checkbox">
-                        <label for="">42.5</label>
-                        <input name="euSize[]" value="42.5"type="checkbox">
-                        <label for="">43</label>
-                        <input name="euSize[]" value="43"type="checkbox">
-                        <label for="">43.5</label>
-                        <input name="euSize[]" value="43.5"type="checkbox">
-                        <label for="">44</label>
-                        <input name="euSize[]" value="44"type="checkbox">
-                        <label for="">45</label>
-                        <input name="euSize[]" value="45"type="checkbox">
-                        <label for="">46.5</label>
-                        <input name="euSize[]" value="46.5"type="checkbox">
-                        <label for="">48.5</label>
-                        <input name="euSize[]" value="48.5"type="checkbox">
-                        
-    
-                    </div>
+                    
                     
                     
                     
@@ -302,7 +236,7 @@
     </form>
 </div>
 
-<script>
+{{-- <script>
     const genderSelect = document.getElementById('genderSelect');
     const ukSizeMen = document.getElementById('ukSizeMen');
     const ukSizeWomen = document.getElementById('ukSizeWomen');
@@ -316,10 +250,10 @@
             ukSizeWomen.style.display = 'none';
         }
     });
-</script>
+</script> --}}
 
 <script src="{{ asset('scripts/thumbPreview.js') }}"></script>
 
-<script src="{{ asset('scripts/selectChange.js') }}" ></script>
+{{-- <script src="{{ asset('scripts/selectChange.js') }}" ></script> --}}
 
 @endsection
